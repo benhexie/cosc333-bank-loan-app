@@ -5,6 +5,45 @@
     height: 100vh;
 }
 
+/* 
+<div class="dashboard__header">
+            <h1 class="dashboard__header--title">Dashboard</h1>
+            <button class="dashboard__header--logout">Logout</button>
+        </div>
+*/
+
+.dashboard__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dashboard__header--title {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.dashboard__header--logout {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--danger-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.dashboard__header--logout:hover {
+    background-color: var(--danger-color-hover);
+}
+
 .wallet {
     width: 100%;
     max-width: 1200px;

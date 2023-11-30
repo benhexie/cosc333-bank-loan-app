@@ -13,6 +13,12 @@ const withdrawCloseBtn = document.querySelector('.withdraw__fund .loan__containe
 const applyCloseBtn = document.querySelector('.apply__loan .loan__container--header-close');
 const payCloseBtn = document.querySelector('.pay__loan .loan__container--header-close');
 
+const logoutBtn = document.getElementById('logoutBtn');
+
+logoutBtn.addEventListener('click', () => {
+    localStorage.clear();
+    location.assign('/login');
+});
 
 fundWalletBtn.addEventListener('click', () => {
     fundWalletContainer.classList.add('show');
