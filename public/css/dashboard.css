@@ -1,0 +1,173 @@
+.dashboard__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+}
+
+.wallet {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    margin-bottom: 30px;
+    margin-top: 30px;
+}
+
+.wallet__content__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.wallet__balance,
+.wallet__due {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wallet__balance--title,
+.wallet__due--title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.wallet__balance--amount,
+.wallet__due--amount {
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.wallet__due--title,
+.wallet__due--amount {
+    color: var(--secondary-color);
+}
+
+.wallet__buttons__container {
+    display: flex;
+    flex-direction: row;
+    padding: 20px;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.wallet__button {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.wallet__button:hover {
+    background-color: var(--secondary-color);
+}
+
+.loan__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    flex-flow: column;
+}
+
+.loan__container--header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px 5px 0 0;
+    width: 100%;
+    max-width: 500px;
+}
+
+.loan__container--header-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.loan__container--header-close {
+    border: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.loan__container--header-close:hover {
+    color: var(--secondary-color);
+}
+
+.loan__container--body {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 0 0 5px 5px;
+    width: 100%;
+    max-width: 500px;
+}
+
+.loan__container--body-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.loan__container--body-form--group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.loan__container--body-form--group label {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.loan__container--body-form--group input,
+.loan__container--body-form--group select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.loan__container--body-form--submit {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.loan__container--body-form--submit:hover {
+    background-color: var(--secondary-color);
+}
+
+:is(.apply__loan,
+.pay__loan,
+.fund__wallet,
+.withdraw__fund).show {
+    display: flex;
+}

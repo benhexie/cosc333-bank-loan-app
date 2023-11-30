@@ -11,8 +11,110 @@
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js" async></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container dashboard__container">
+        <div class="wallet">
+            <div class="wallet__content__container">
+                <div class="wallet__balance">
+                    <h2 class="wallet__balance--title">Balance</h2>
+                    <p class="wallet__balance--amount">₦ 0.00</p>
+                </div>
+                <div class="wallet__due">
+                    <h2 class="wallet__due--title">Due</h2>
+                    <p class="wallet__due--amount">₦ 0.00</p>
+                </div>
+            </div>
+            <div class="wallet__buttons__container">
+                <button class="wallet__button" id="fundWalletBtn" >Fund Wallet</button>
+                <button class="wallet__button" id="withdrawBtn">Withdraw</button>
+                <button class="wallet__button" id="applyBtn">Apply for Loan</button>
+                <button class="wallet__button" id="payBtn">Pay Loan</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="loan__container fund__wallet">
+        <div class="loan__container--header">
+            <h2 class="loan__container--header-title">Fund wallet</h2>
+            <button class="loan__container--header-close">X</button>
+        </div>
+        <div class="loan__container--body">
+            <form action="" method="POST" class="loan__container--body-form">
+                <div class="loan__container--body-form--group">
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" id="amount" placeholder="Enter amount">
+                </div>
+                <button class="loan__container--body-form--submit">Fund Wallet</button>
+            </form>
+        </div>
+    </div>
+    
+    <div class="loan__container apply__loan">
+        <div class="loan__container--header">
+            <h2 class="loan__container--header-title">Apply for loan</h2>
+            <button class="loan__container--header-close">X</button>
+        </div>
+        <div class="loan__container--body">
+            <form action="" method="POST" class="loan__container--body-form">
+                <div class="loan__container--body-form--group">
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" id="amount" placeholder="Enter amount">
+                </div>
+                <div class="loan__container--body-form--group">
+                    <label for="duration">Duration</label>
+                    <select name="duration" id="duration">
+                        <option value="1">1 month</option>
+                        <option value="2">2 months</option>
+                        <option value="3">3 months</option>
+                        <option value="4">4 months</option>
+                        <option value="5">5 months</option>
+                        <option value="6">6 months</option>
+                        <option value="7">7 months</option>
+                        <option value="8">8 months</option>
+                        <option value="9">9 months</option>
+                        <option value="10">10 months</option>
+                        <option value="11">11 months</option>
+                        <option value="12">12 months</option>
+                    </select>
+                </div>
+                <div class="loan__container--body-form--group">
+                    <label for="purpose">Purpose</label>
+                    <input type="text" name="purpose" id="purpose" placeholder="Enter purpose">
+                </div>
+                <button class="loan__container--body-form--submit">Submit Application</button>
+            </form>
+        </div>
+    </div>
 
+    <div class="loan__container pay__loan">
+        <div class="loan__container--header">
+            <h2 class="loan__container--header-title">Pay loan</h2>
+            <button class="loan__container--header-close">X</button>
+        </div>
+        <div class="loan__container--body">
+            <form action="" method="POST" class="loan__container--body-form">
+                <div class="loan__container--body-form--group">
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" id="amount" placeholder="Enter amount">
+                </div>
+                <button class="loan__container--body-form--submit">Pay Loan</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="loan__container withdraw__fund">
+        <div class="loan__container--header">
+            <h2 class="loan__container--header-title">Withdraw</h2>
+            <button class="loan__container--header-close">X</button>
+        </div>
+        <div class="loan__container--body">
+            <form action="" method="POST" class="loan__container--body-form">
+                <div class="loan__container--body-form--group">
+                    <label for="amount">Amount</label>
+                    <input type="number" name="amount" id="amount" placeholder="Enter amount">
+                </div>
+                <button class="loan__container--body-form--submit">Withdraw</button>
+            </form>
+        </div>
     </div>
 </body>
 </html>
